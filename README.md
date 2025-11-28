@@ -3,7 +3,7 @@
 Tracekit is a developer-focused observability tool for tracing requests, inspecting webhook payloads, and replaying failures without guesswork.  
 This repo contains the marketing site built with Next.js App Router + Tailwind CSS.
 
-![Tracekit preview](https://placehold.co/1200x720?text=Tracekit+Landing+Preview)
+![Tracekit landing page preview](public/landing_page.png)
 
 ## Tech Stack
 - Next.js 15 App Router (TypeScript)
