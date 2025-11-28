@@ -50,7 +50,7 @@ const ICON_MAP: Record<
 
 export function FeaturesSection() {
   return (
-    <section id="features" className="border-b border-zinc-100 bg-zinc-50 py-20">
+    <section id="features" className="border-b border-zinc-300 bg-zinc-50 py-20">
       <Container className="space-y-10">
         <div className="space-y-3 text-zinc-900">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">

@@ -11,9 +11,9 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="border-b border-zinc-100 bg-gradient-to-b from-zinc-50 to-white py-20 text-zinc-900"
+      className="border-b border-zinc-300 bg-gradient-to-b from-zinc-50 to-white py-20 text-zinc-900"
     >
-      <Container className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-center">
+      <Container className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_520px] lg:items-center">
         <div className="space-y-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
             <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -37,27 +37,27 @@ export function HeroSection() {
             Built for developers • Works with Stripe / GitHub / Shopify webhooks
           </p>
         </div>
-        <article className="relative rounded-3xl border border-zinc-100 bg-white p-6 shadow-2xl shadow-emerald-200/30">
-          <header className="flex items-center justify-between border-b border-zinc-100 pb-4">
-            <div className="space-y-1">
+        <article className="relative rounded-[32px] border border-zinc-200 bg-white p-8 shadow-2xl shadow-emerald-200/40">
+          <header className="flex items-center justify-between border-b border-zinc-100 pb-5">
+            <div className="space-y-1.5">
               <p className="text-sm font-medium text-zinc-500">Workspace</p>
-              <p className="text-lg font-semibold text-zinc-900">Prod ingest</p>
+              <p className="text-xl font-semibold text-zinc-900">Prod ingest</p>
             </div>
             <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700">
               <span className="inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-500" />
               Streaming
             </span>
           </header>
-          <div className="mt-4 grid gap-4 lg:grid-cols-[160px_minmax(0,1fr)]">
-            <div className="space-y-2 rounded-2xl border border-zinc-100 bg-zinc-50/80 p-3">
-              <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+          <div className="mt-6 grid gap-5 lg:grid-cols-[210px_minmax(0,1fr)]">
+            <div className="space-y-3 rounded-[24px] border border-zinc-200 bg-zinc-50/80 p-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
                 Requests
               </p>
-              <ul className="space-y-2 text-sm">
+              <ul className="space-y-3 text-sm">
                 {MOCK_REQUESTS.map((request) => (
                   <li
                     key={request.id}
-                    className="rounded-xl border border-transparent bg-white/70 px-3 py-2 text-zinc-700"
+                    className="rounded-2xl border border-transparent bg-white/80 px-4 py-3 text-zinc-700 shadow-sm"
                   >
                     <div className="flex items-center justify-between">
                       <span className="font-medium text-zinc-900">{request.source}</span>
@@ -73,26 +73,26 @@ export function HeroSection() {
                 ))}
               </ul>
             </div>
-            <div className="space-y-3 rounded-2xl border border-zinc-100 bg-white/80 p-4">
+            <div className="space-y-4 rounded-[24px] border border-zinc-200 bg-white/85 p-5">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
                   Delivery timeline
                 </p>
                 <div className="mt-2 h-2 rounded-full bg-zinc-100">
                   <div className="h-full w-3/4 rounded-full bg-emerald-500" />
                 </div>
               </div>
-              <div className="rounded-xl border border-zinc-100 bg-zinc-50/80 p-3 text-sm text-zinc-600">
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+              <div className="rounded-2xl border border-zinc-200 bg-zinc-50/80 p-4 text-sm text-zinc-600">
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
                   Payload diff
                 </p>
-                <pre className="mt-2 overflow-x-auto text-xs text-zinc-800">
+                <pre className="mt-3 overflow-x-auto rounded-lg bg-black/5 p-3 text-xs text-zinc-800">
 {`- "status": "failed"
 + "status": "delivered"
   "latency": "${MOCK_REQUESTS[1].latency}"`}
                 </pre>
               </div>
-              <div className="flex items-center justify-between rounded-xl border border-zinc-100 bg-white/70 px-3 py-2 text-sm text-zinc-600">
+              <div className="flex items-center justify-between rounded-2xl border border-zinc-200 bg-white/70 px-4 py-3 text-sm text-zinc-600">
                 <span>Replay ready</span>
                 <Button className="h-9 px-4 text-sm">Replay</Button>
               </div>

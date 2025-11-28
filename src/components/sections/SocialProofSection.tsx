@@ -6,7 +6,7 @@ export function SocialProofSection() {
   return (
     <section
       id="social-proof"
-      className="border-b border-zinc-100 bg-white py-16 text-zinc-900"
+      className="border-b border-zinc-300 bg-white py-16 text-zinc-900"
     >
       <Container className="space-y-6">
         <div className="space-y-2">

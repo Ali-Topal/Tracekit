@@ -3,8 +3,8 @@ import { Container } from "@/components/ui/container";
 
 export function FinalCtaSection() {
   return (
-    <section id="final-cta" className="border-b border-zinc-100 bg-white py-20">
-      <Container className="space-y-6 rounded-3xl border border-zinc-100 bg-zinc-50 px-8 py-14 text-center text-zinc-900">
+    <section id="final-cta" className="border-b border-zinc-300 bg-white py-20">
+      <Container className="space-y-6 rounded-3xl border border-zinc-300 bg-zinc-50 px-8 py-14 text-center text-zinc-900">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">
           Ready when you are
         </p>

@@ -3,7 +3,7 @@ import { STEPS } from "@/content/site";
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="border-b border-zinc-100 bg-white py-20">
+    <section id="how-it-works" className="border-b border-zinc-300 bg-white py-20">
       <Container className="space-y-10 text-zinc-900">
         <div className="space-y-3">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">

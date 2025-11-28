@@ -25,7 +25,7 @@ export function CodeSnippetSection() {
   };
 
   return (
-    <section id="code" className="border-b border-zinc-100 bg-zinc-950 py-20 text-white">
+    <section id="code" className="border-b border-zinc-300 bg-zinc-950 py-20 text-white">
       <Container className="space-y-6">
         <div className="space-y-2">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">

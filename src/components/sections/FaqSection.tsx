@@ -12,7 +12,7 @@ export function FaqSection() {
     setOpenItems((prev) => ({ ...prev, [question]: !prev[question] }));
 
   return (
-    <section id="faq" className="border-b border-zinc-100 bg-zinc-50 py-20">
+    <section id="faq" className="border-b border-zinc-300 bg-zinc-50 py-20">
       <Container className="space-y-8 text-zinc-900">
         <div className="space-y-2">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">

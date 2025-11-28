@@ -8,6 +8,7 @@ import { useEffect, useId, useState } from "react";
 
 export function HeaderSection() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const mobileMenuId = useId();
 
   useEffect(() => {
@@ -31,6 +32,19 @@ export function HeaderSection() {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   const renderLinks = (className?: string) =>
@@ -40,7 +54,7 @@ export function HeaderSection() {
         href={item.href}
         onClick={closeMenu}
         className={cn(
-          "text-sm font-medium text-zinc-600 transition hover:text-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400",
+          "text-base font-semibold text-zinc-900 transition hover:text-zinc-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400",
           className
         )}
       >
@@ -49,16 +63,26 @@ export function HeaderSection() {
     ));
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-100 bg-white/80 backdrop-blur" id="top">
-      <Container className="flex h-20 items-center justify-between gap-4">
-        <a
-          href="#hero"
-          className="text-lg font-semibold tracking-tight text-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400"
-        >
-          Tracekit
-        </a>
-        <nav className="hidden items-center gap-6 md:flex">{renderLinks()}</nav>
-        <div className="hidden items-center gap-3 md:flex">
+    <header
+      className={cn(
+        "sticky top-0 z-50 border-b border-zinc-300 transition-colors duration-300",
+        isScrolled
+          ? "bg-white/10 backdrop-blur-md shadow-[0_10px_25px_rgba(15,23,42,0.08)]"
+          : "bg-white"
+      )}
+      id="top"
+    >
+      <Container className="flex h-20 items-center gap-4">
+        <div className="flex items-center md:flex-1">
+          <a
+            href="#hero"
+            className="text-xl font-semibold tracking-tight text-zinc-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-400 sm:text-2xl"
+          >
+            Tracekit
+          </a>
+        </div>
+        <nav className="hidden flex-1 items-center justify-center gap-6 md:flex">{renderLinks()}</nav>
+        <div className="hidden flex-1 items-center justify-end gap-3 md:flex">
           <Button variant="secondary">View docs</Button>
           <Button>Get API key</Button>
         </div>
