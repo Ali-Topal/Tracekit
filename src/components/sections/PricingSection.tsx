@@ -21,7 +21,7 @@ export function PricingSection() {
             <article
               key={tier.name}
               className={cn(
-                "flex h-full flex-col rounded-3xl border border-zinc-200 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl",
+                "flex h-full min-h-[420px] flex-col rounded-3xl border border-zinc-200 bg-white/80 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl",
                 tier.highlighted && "border-emerald-500 bg-emerald-50 shadow-emerald-100/80"
               )}
             >
@@ -37,7 +37,7 @@ export function PricingSection() {
               </div>
               <p className="mt-4 text-4xl font-semibold">{tier.price}</p>
               <p className="text-sm text-zinc-600">{tier.tagline}</p>
-              <ul className="mt-6 space-y-3 text-sm text-zinc-700">
+              <ul className="mt-6 flex flex-1 flex-col space-y-3 text-sm text-zinc-700">
                 {tier.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
@@ -45,7 +45,7 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Button className="mt-8 w-full" variant={tier.highlighted ? "primary" : "secondary"}>
+              <Button className="mt-8 w-full md:mt-auto" variant={tier.highlighted ? "primary" : "secondary"}>
                 {tier.highlighted ? "Start Pro trial" : "Talk to us"}
               </Button>
             </article>
