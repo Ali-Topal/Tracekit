@@ -37,7 +37,7 @@ export function PricingSection() {
               </div>
               <p className="mt-4 text-4xl font-semibold">{tier.price}</p>
               <p className="text-sm text-zinc-600">{tier.tagline}</p>
-              <ul className="mt-6 space-y-3 text-sm text-zinc-700">
+              <ul className="mt-6 flex flex-1 flex-col space-y-3 text-sm text-zinc-700">
                 {tier.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
