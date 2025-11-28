@@ -45,10 +45,7 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <Button
-                className="mt-8 w-full"
-                variant={tier.highlighted ? "primary" : "ghost"}
-              >
+              <Button className="mt-8 w-full" variant={tier.highlighted ? "primary" : "secondary"}>
                 {tier.highlighted ? "Start Pro trial" : "Talk to us"}
               </Button>
             </article>

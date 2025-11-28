@@ -15,7 +15,7 @@ export function FinalCtaSection() {
         </p>
         <div className="flex flex-wrap justify-center gap-3">
           <Button>Get API key</Button>
-          <Button variant="ghost">View docs</Button>
+          <Button variant="secondary">View docs</Button>
         </div>
       </Container>
     </section>

@@ -59,7 +59,7 @@ export function HeaderSection() {
         </a>
         <nav className="hidden items-center gap-6 md:flex">{renderLinks()}</nav>
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost">View docs</Button>
+          <Button variant="secondary">View docs</Button>
           <Button>Get API key</Button>
         </div>
         <button
@@ -117,7 +117,7 @@ export function HeaderSection() {
               </div>
               <div className="flex flex-col gap-3">{renderLinks("text-base")}</div>
               <div className="flex flex-col gap-3">
-                <Button variant="ghost" onClick={closeMenu}>
+                <Button variant="secondary" onClick={closeMenu}>
                   View docs
                 </Button>
                 <Button onClick={closeMenu}>Get API key</Button>

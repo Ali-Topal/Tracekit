@@ -30,7 +30,7 @@ export function HeroSection() {
           </div>
           <div className="flex flex-wrap gap-3">
             <Button>Get API key</Button>
-            <Button variant="ghost">View docs</Button>
+            <Button variant="secondary">View docs</Button>
           </div>
           <p className="flex items-center gap-3 text-sm font-medium text-zinc-500">
             <span className="inline-flex h-2.5 w-2.5 animate-pulse rounded-full bg-emerald-500" />
