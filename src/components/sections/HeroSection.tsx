@@ -15,7 +15,7 @@ export function HeroSection() {
     >
       <Container className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_520px] lg:items-center">
         <div className="space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-500">
+          <span className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50/90 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-emerald-700 shadow-[0_0_20px_rgba(16,185,129,0.35)]">
             <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
             Live observability
           </span>
