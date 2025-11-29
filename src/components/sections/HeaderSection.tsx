@@ -67,7 +67,7 @@ export function HeaderSection() {
       className={cn(
         "sticky top-0 z-50 border-b border-zinc-300 transition-colors duration-300",
         isScrolled
-          ? "bg-white/10 backdrop-blur-md shadow-[0_10px_25px_rgba(15,23,42,0.08)]"
+          ? "bg-white/30 backdrop-blur-md shadow-[0_10px_25px_rgba(15,23,42,0.08)]"
           : "bg-white"
       )}
       id="top"

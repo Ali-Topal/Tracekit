@@ -1,68 +1,97 @@
 # Tracekit Landing Page
 
-Tracekit is a developer-focused observability tool for tracing requests, inspecting webhook payloads, and replaying failures without guesswork.  
-This repo contains the marketing site built with Next.js App Router + Tailwind CSS.
+> Portfolio build showcasing premium marketing-site craft for a developer observability product.
 
-![Tracekit preview](https://placehold.co/1200x720?text=Tracekit+Landing+Preview)
+![Tracekit preview](public/landing_page.png)
 
-## Tech Stack
-- Next.js 15 App Router (TypeScript)
-- Tailwind CSS 4
-- Reusable UI primitives (Button, Container, etc.)
-- Content modules (`src/content/site.ts`) to keep copy centralized
+This repo contains a single-page experience designed to demonstrate:
 
-## Highlights
-- Sticky header with responsive nav + mobile overlay
-- Premium hero with animated request preview + CTA pair
-- Feature grid + 3-step flow rendered from typed data
-- Interactive code snippet (copy-to-clipboard with feedback)
-- Pricing tiers with emphasized “Pro” plan
-- Accessible FAQ accordion (keyboard + focus-visible)
+- strong visual hierarchy and brand polish,
+- modular, data-driven sections,
+- attention to accessibility and keyboard flows, and
+- production-ready Next.js/Tailwind patterns you can trust for client work.
 
-## Getting Started
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
-2. **Run locally**
-   ```bash
-   npm run dev
-   ```
-3. **Lint / build**
-   ```bash
-   npm run lint
-   npm run build
-   ```
+---
 
-> Requires Node.js 18+.
+## Overview
+
+| Section | Highlights |
+| ------- | ---------- |
+| Header / Hero | Sticky nav with mobile overlay, CTA pair, animated “live observability” preview |
+| Social Proof | Auto-scrolling placeholder logos (fictional) to show layout potential |
+| Features & Flow | Typed content model powering cards and timeline |
+| Code Snippet | Accessible copy-to-clipboard interaction with feedback state |
+| Pricing & FAQ | Responsive card grid, accordion with keyboard support |
+| Footer | Three-column structure with product/company links and portfolio note |
+
+All content lives in `src/content/site.ts`, making it easy to swap real data in when a client is ready.
+
+---
+
+## Tech Stack & Tooling
+
+- **Next.js 15 App Router** (TypeScript, RSC-first)
+- **Tailwind CSS 4** with custom utility layer
+- Reusable UI primitives (`Button`, `Container`) to keep layout consistent
+- Typed content modules for navigation, features, pricing, FAQ, footer, and placeholder logos
+- Zero third-party UI dependencies to keep bundle lean
+
+---
+
+## Running Locally
+
+```bash
+# 1. Install
+npm install
+
+# 2. Start dev server (Turbopack ready)
+npm run dev
+
+# 3. Quality checks
+npm run lint
+npm run build
+```
+
+Requirements: **Node.js 18+**
+
+---
 
 ## Project Structure
+
 ```
 app/
-  layout.tsx        # Metadata + global font config
+  layout.tsx        # Metadata + font config (Geist)
   page.tsx          # Section composition only
 src/
   components/
-    sections/       # Header, Hero, Features, Pricing, etc.
+    sections/       # Header, Hero, SocialProof, Features, etc.
     ui/             # Button, Container primitives
-  content/site.ts   # Typed marketing copy + data
+  content/site.ts   # Typed marketing copy + placeholder logos/footer links
   lib/cn.ts         # Classname helper
-public/             # SVG assets
-docs/               # Step-by-step build instructions
+public/
+  landing_page.png  # Screenshot preview
+docs/
+  STEP_*.md         # Build notes per milestone
 ```
 
-## Deployment
-- Production URL: `https://tracekit.dev` (update once deployed)
-- Recommended: Vercel (auto-build `npm run build`)
+---
 
 ## Quality Checklist
+
+- [x] Responsive review @ 375 / 768 / 1280 (Chrome dev tools)
+- [x] Keyboard navigation + focus states verified
 - [x] `npm run lint`
 - [x] `npm run build`
-- [x] Manual responsive review at **375 / 768 / 1280**
 - [x] No console errors in dev/build
-- [x] README includes setup + screenshot placeholder
 
-## Future Improvements
-- Hook up actual product screenshots for OG/Twitter images
-- Connect CTAs to live docs/signup once backend is available
-- Add integration logos + real testimonials
+---
+
+## Opportunities for Clients
+
+Want to reuse this foundation for your product?
+
+- Swap in real logos/content via `src/content/site.ts`
+- Hook CTAs to live docs or onboarding flows
+- Extend sections (e.g., testimonials, long-form blog) without refactoring core layout
+
+Questions or collaboration ideas? Reach out via the contact links in the footer. I’m happy to adapt this build to your brand or craft something new.

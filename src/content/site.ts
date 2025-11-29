@@ -42,6 +42,21 @@ type FooterLinkGroup = {
   links: FooterLink[];
 };
 
+type SocialProofLogo = {
+  name: string;
+  wordmark: "text" | "svg";
+};
+
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
+type FooterLinkGroup = {
+  title: string;
+  links: FooterLink[];
+};
+
 export const NAV_ITEMS: Readonly<NavItem[]> = [
   { label: "Features", href: "#features" },
   { label: "How it works", href: "#how-it-works" },
