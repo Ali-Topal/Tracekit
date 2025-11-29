@@ -22,11 +22,19 @@ export function SocialProofSection() {
           </p>
         </div>
         <div className="relative overflow-hidden">
-          <div className="flex min-w-full items-center gap-12 py-6 text-sm font-semibold uppercase tracking-[0.5em] text-zinc-400 will-change-transform animate-marquee">
+          <div
+            className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-white to-transparent"
+            aria-hidden="true"
+          />
+          <div
+            className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-white to-transparent"
+            aria-hidden="true"
+          />
+          <div className="flex min-w-full items-center gap-12 py-6 text-sm font-semibold uppercase tracking-[0.4em] text-zinc-400 will-change-transform animate-marquee">
             {marqueeLogos.map((logo, index) => (
               <span
                 key={`${logo.name}-${index}`}
-                className="flex min-w-[170px] items-center justify-center text-zinc-500"
+                className="flex min-w-[180px] items-center justify-center text-zinc-500"
                 aria-hidden={index >= SOCIAL_PROOF_LOGOS.length}
               >
                 <span className="sr-only">{logo.name}</span>

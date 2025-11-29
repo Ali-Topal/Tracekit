@@ -27,11 +27,20 @@ type FaqItem = {
   answer: string;
 };
 
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
+type FooterLinkGroup = {
+  title: string;
+  links: FooterLink[];
+};
+
 type SocialProofLogo = {
   name: string;
   wordmark: "text" | "svg";
 };
-
 export const NAV_ITEMS: Readonly<NavItem[]> = [
   { label: "Features", href: "#features" },
   { label: "How it works", href: "#how-it-works" },
@@ -179,5 +188,25 @@ export const SOCIAL_PROOF_LOGOS: Readonly<SocialProofLogo[]> = [
   { name: "DeltaMesh", wordmark: "text" },
   { name: "StackBeacon", wordmark: "text" },
   { name: "OrbitOps", wordmark: "text" },
+] as const;
+
+export const FOOTER_LINK_GROUPS: Readonly<FooterLinkGroup[]> = [
+  {
+    title: "Product",
+    links: [
+      { label: "Docs", href: "#" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "FAQ", href: "#faq" },
+      { label: "Status", href: "#" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+      { label: "Contact", href: "#" },
+    ],
+  },
 ] as const;
 
