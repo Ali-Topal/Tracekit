@@ -27,6 +27,20 @@ type FaqItem = {
   answer: string;
 };
 
+type FooterLink = {
+  label: string;
+  href: string;
+};
+
+type FooterLinkGroup = {
+  title: string;
+  links: FooterLink[];
+};
+
+type SocialProofLogo = {
+  name: string;
+  wordmark: "text" | "svg";
+};
 export const NAV_ITEMS: Readonly<NavItem[]> = [
   { label: "Features", href: "#features" },
   { label: "How it works", href: "#how-it-works" },
@@ -163,4 +177,36 @@ export const CODE_SNIPPET = `curl -X POST https://api.tracekit.dev/v1/events \\
       "currency": "usd"
     }
   }'` as const;
+
+// Fictional placeholder companies for demo purposes only.
+export const SOCIAL_PROOF_LOGOS: Readonly<SocialProofLogo[]> = [
+  { name: "Byteforge", wordmark: "text" },
+  { name: "CloudHarbor", wordmark: "text" },
+  { name: "SignalLint", wordmark: "text" },
+  { name: "NeonPulse", wordmark: "text" },
+  { name: "RelayNest", wordmark: "text" },
+  { name: "DeltaMesh", wordmark: "text" },
+  { name: "StackBeacon", wordmark: "text" },
+  { name: "OrbitOps", wordmark: "text" },
+] as const;
+
+export const FOOTER_LINK_GROUPS: Readonly<FooterLinkGroup[]> = [
+  {
+    title: "Product",
+    links: [
+      { label: "Docs", href: "#" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "FAQ", href: "#faq" },
+      { label: "Status", href: "#" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "Privacy", href: "#" },
+      { label: "Terms", href: "#" },
+      { label: "Contact", href: "#" },
+    ],
+  },
+] as const;
 
